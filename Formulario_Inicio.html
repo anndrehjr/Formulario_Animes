@@ -23,7 +23,7 @@
     </div>
 
     <!-- Início do formulário -->
-    <form>
+    <form action="/salvar-dados" method="POST">
 
         <fieldset class="grupo">
             <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
@@ -39,13 +39,13 @@
             </div>
         </fieldset>
 
-        <!-- Campo de email com-->
+        <!-- Campo de email -->
         <div class="campo">
             <label for="email"><strong>Email</strong></label>
             <input type="email" name="email" id="email" required>
         </div>
 
-        <!-- Campo de gênero de anime com 3 opções de botões selecionáveis (radio button) e css de classe "campo" -->
+        <!-- Campo de gênero de anime -->
         <div class="campo">
             <label><strong>Qual gênero de anime você prefere?</strong></label>
             <label>
@@ -59,10 +59,10 @@
             </label>
         </div>
 
-        <!-- Campo de status como fã de anime com 3 opções para escolha (select option) e css de classe "campo" -->
+        <!-- Campo de status como fã de anime -->
         <div class="campo">
             <label for="status"><strong>Qual seu status como fã de anime?</strong></label>
-            <select id="status" required>
+            <select id="status" name="status" required>
                 <option selected disabled value="">Selecione</option>
                 <option>Casual</option>
                 <option>Fã Dedicado</option>
@@ -71,7 +71,7 @@
         </div>
 
         <fieldset class="grupo">
-            <!-- Campo de animes favoritos para escolha de 1 ou mais opções para marcar (checkbox) e css de classe "campo" -->
+            <!-- Campo de animes favoritos -->
             <div id="check">
                 <label><strong>Selecione seus animes favoritos:</strong></label><br><br>
                 <input type="checkbox" id="anime1" name="anime1" value="Naruto">
@@ -99,7 +99,9 @@
         </div>
 
         <!-- Botão para enviar o formulário -->
-        <button class="botao" type="submit" onsubmit="">Concluído</button>
+        <button class="botao" type="submit">Concluído</button>
+        <form action="http://localhost:3000/salvar-dados" method="POST"></form>
+
 
     </form>
 
